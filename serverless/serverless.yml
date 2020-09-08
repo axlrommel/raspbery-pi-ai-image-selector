@@ -9,18 +9,12 @@ provider:
   runtime: nodejs12.x
   region: us-east-1
   timeout: 30
-  role: arn:aws:iam::988615802188:role/lambda-vpc-role
   iamRoleStatements:
     - Effect: 'Allow'
       Action:
         - 's3:*'
       Resource:
         - '*'
-    - Effect: 'Allow'
-      Action:
-        - 'ses:SendEmail'
-      Resource:
-        - 'arn:aws:ses:us-east-1:988615802188:identity/info@lagrangetechologies.com'
     - Effect: 'Allow'
       Action:
         - 'lambda:InvokeFunction'

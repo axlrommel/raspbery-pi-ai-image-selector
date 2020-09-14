@@ -4,6 +4,17 @@ plugins:
   - serverless-offline
   - serverless-plugin-typescript
 
+package:
+  exclude:
+    - node_modules/**
+    - '!node_modules/node-fetch/**'
+    - '!node_modules/serverless-http/**'
+    - '!node_modules/@tensorflow/tfjs/**'
+    - '!node_modules/ramda/**'
+    - '!node_modules/express/**'
+    - '!node_modules/body-parser/**'
+    - '!node_modules/cors/**'
+
 provider:
   name: aws
   runtime: nodejs12.x

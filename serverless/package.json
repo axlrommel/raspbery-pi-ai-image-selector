@@ -5,15 +5,14 @@
   "main": "index.js",
   "scripts": {
     "start": "serverless offline start --port 3000",
-    "deploy": "sls deploy --stage dev",
-    "log": "serverless logs -f $FUNCTION -s $STAGE",
-    "log:tail": "serverless logs -f $FUNCTION -s $STAGE -t"
+    "deploy": "sls deploy --stage dev"
   },
   "keywords": [
     "lambda",
     "express",
     "serverless",
-    "aws"
+    "aws",
+    "tensor-flow"
   ],
   "author": "ravill2",
   "license": "ISC",

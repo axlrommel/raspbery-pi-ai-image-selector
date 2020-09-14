@@ -18,11 +18,11 @@ class NumpyEncoder(json.JSONEncoder):
 
 
 IMG_SIZE = 30
+url = 'https://90ypu1bv59.execute-api.us-east-1.amazonaws.com/dev/analyze-image'
 
 img_array = cv2.imread("./samples/cat.123.jpg",
                        cv2.IMREAD_GRAYSCALE)
 new_array = cv2.resize(img_array, (IMG_SIZE, IMG_SIZE)).flatten()
 JSON_array = json.dumps(new_array, cls=NumpyEncoder)
-url = 'http://localhost:3000/analyze-image'
 response = requests.post(url, data=JSON_array)
 print(response.text)

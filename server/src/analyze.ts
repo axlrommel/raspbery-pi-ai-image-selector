@@ -20,7 +20,7 @@ export const analyze = async (req: any, res: any) => {
       res.send(categories[result[0] > result[1] ? 0 : 1]);
     } else {
       console.log('empty body');
-      res.send('');
+      res.send({ status: 'empty body' });
     }
   } catch (error) {
     console.log(error);

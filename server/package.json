@@ -4,8 +4,8 @@
   "description": "lambda express aws serverless ai",
   "main": "index.js",
   "scripts": {
-    "start": "serverless offline start --port 3000",
-    "deploy": "sls deploy --stage dev"
+    "start": "ts-node ./src/app.ts",
+    "dev": "ts-node-dev --respawn --transpile-only ./src/app.ts"
   },
   "keywords": [
     "lambda",
@@ -21,14 +21,13 @@
     "@types/cors": "^2.8.7",
     "@types/ramda": "^0.27.14",
     "body-parser": "^1.19.0",
-    "cors": "^2.8.5",
     "express": "^4.17.1",
     "node-fetch": "^2.6.1",
     "ramda": "^0.27.1",
-    "serverless": "^1.78.1",
-    "serverless-http": "^2.0.2",
-    "serverless-offline": "^5.7.2",
-    "serverless-plugin-typescript": "^1.1.7",
+    "ts-node": "^9.0.0",
     "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^1.0.0"
   }
 }
